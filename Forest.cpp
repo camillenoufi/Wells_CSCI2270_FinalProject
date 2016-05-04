@@ -5,6 +5,8 @@
 #include <vector>
 using namespace std;
 
+string input;
+
 Forest::Forest()
 {
     //ctor
@@ -16,7 +18,6 @@ Forest::~Forest()
 }
 
 void Forest::play(){
-    string input;
     cout<<"Would you like to play a game?"<<endl;
     cout<<"Y or N"<<endl;
     cin>>input;
@@ -34,7 +35,6 @@ void Forest::play(){
 }
 
 void Forest::options1(){
-    string input;
     cout<<"Welcome to the beginning of a strange journey."<<endl;
     cout<<"You find yourself in dense, misty forest. A clear night sky provides you with enough light to make out the terrain within a small radius of your feet."<<endl;
     cout<<"What's your first move?"<<endl;
@@ -67,10 +67,10 @@ void Forest::options1(){
 }
 
 void Forest::opt1(){
-    string input;
     cout<<"A. Start walking"<<endl;
     cout<<"B. Sit down and ask 'How did I get here?'"<<endl;
     cout<<"C. Look around."<<endl;
+    cin>>input;
      if(input=="A"){
         options2();
     }
@@ -98,7 +98,6 @@ void Forest::opt1(){
 }
 
 void Forest::options2(){
-    string input;
     position++;
     cout<<"Your first clue lies at the base of a tall pine tree."<<endl;
     cout<<"A bloodied meat cleaver"<<endl;
@@ -135,7 +134,6 @@ void Forest::options2(){
 }
 
 void Forest::opt2(){
-    string input;
     cout<<"A. Pick it up"<<endl;
     cout<<"B. Keep walking"<<endl;
     cin>>input;
@@ -162,7 +160,6 @@ void Forest::opt2(){
 }
 
 void Forest::op2(){
-    string input;
     cout<<"A. Pick it up"<<endl;
     cout<<"B. Keep walking"<<endl;
     cin>>input;
@@ -196,7 +193,6 @@ void Forest::opp2(){
 }
 
 void Forest::options3(){
-    string input;
     position++;
     cout<<"You begin to smell smoke, but also something rancid."<<endl;
     cout<<"There is a note stuck under a rock nearby. You pick it up"<<endl;
@@ -223,7 +219,6 @@ void Forest::options3(){
 }
 
 void Forest::options4(){
-    string input;
     position++;
     cout<<"You approach a campfire. What you see next is greatly disturbing."<<endl;
     cout<<"All four of your friends lie on the ground around the flame, each one with a crushed neck and mouths agape."<<endl;
