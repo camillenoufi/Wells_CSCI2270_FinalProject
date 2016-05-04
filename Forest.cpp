@@ -20,10 +20,10 @@ void Forest::play(){
     cout<<"Would you like to play a game?"<<endl;
     cout<<"Y or N"<<endl;
     cin>>input;
-    if(input=="Y"){
+    if(input=="Y" || input == "y"){
         options1();
     }
-    if(input=="N"){
+    if(input=="N" || input == "n"){
         cout<<"Maybe next time... Goodbye."<<endl;
         return;
     }
@@ -33,8 +33,8 @@ void Forest::play(){
     }
 }
 
-void Forest::options1(){
-    string input;
+void Forest::options1(){            
+    string in;
     cout<<"Welcome to the beginning of a strange journey."<<endl;
     cout<<"You find yourself in dense, misty forest. A clear night sky provides you with enough light to make out the terrain within a small radius of your feet."<<endl;
     cout<<"What's your first move?"<<endl;
@@ -42,20 +42,20 @@ void Forest::options1(){
     cout<<"B. Sit down and ask 'How did I get here?'"<<endl;
     cout<<"C. Check your pockets."<<endl;
     cout<<"D. Look around."<<endl;
-    cin>>input;
-    if(input=="A"){
+    cin>>in;
+    if(in=="A"){
         options2();
     }
-    if(input=="B"){
+    if(in=="B"){
         cout<<"The last thing you remember is heading out for a camping trip with your friends. Someone mentioned something about a series of murders in the area..."<<endl;
         cout<<"You begin walking at a brisk pace."<<endl;
         options2();
     }
-    if(input=="C"){
+    if(in=="C"){
         displayInventory(inventory);
         opt1();
     }
-    if(input=="D"){
+    if(in=="D"){
         displayPosition();
         opt1();
     }
@@ -71,6 +71,7 @@ void Forest::opt1(){
     cout<<"A. Start walking"<<endl;
     cout<<"B. Sit down and ask 'How did I get here?'"<<endl;
     cout<<"C. Look around."<<endl;
+    cin>>input;
      if(input=="A"){
         options2();
     }
@@ -97,7 +98,7 @@ void Forest::opt1(){
 
 }
 
-void Forest::options2(){
+void Forest::options2(){                
     string input;
     position++;
     cout<<"Your first clue lies at the base of a tall pine tree."<<endl;
@@ -195,7 +196,7 @@ void Forest::opp2(){
     }
 }
 
-void Forest::options3(){
+void Forest::options3(){                            
     string input;
     position++;
     cout<<"You begin to smell smoke, but also something rancid."<<endl;
